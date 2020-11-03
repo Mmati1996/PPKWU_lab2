@@ -5,16 +5,21 @@ import lombok.Data;
 @Data
 public class StringAnalizer {
     private String string;
-    private int upper;
-    private int lower;
-    private int digits;
-    private int special;
+    private int upper = 0;
+    private int lower = 0;
+    private int digits = 0;
+    private int special = 0;
 
     public StringAnalizer(String string) {
-        this.string = string;
-        this.upper = 0;
-        this.lower = 0;
-        this.digits = 0;
-        this.special = 0;
+        for (int i=0; i<string.length();i++){
+            if (string.toCharArray()[i]>='A' && string.toCharArray()[i]<='Z')
+                upper++;
+            else if(string.toCharArray()[i]>='a'&&string.toCharArray()[i]<='z')
+                lower++;
+            else if (string.toCharArray()[i]>='0'&&string.toCharArray()[i]<='9')
+                digits++;
+            else
+                special++;
+        }
     }
 }
