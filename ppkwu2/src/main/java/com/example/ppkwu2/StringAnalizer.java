@@ -1,5 +1,8 @@
 package com.example.ppkwu2;
 
+import lombok.Data;
+
+@Data
 public class StringAnalizer {
     private String string;
     private int upper;

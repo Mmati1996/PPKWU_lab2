@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StringAnalizerController {
 
+    // == http://localhost:8080/stringinfo?string=12345qwer ==
     @GetMapping("/stringinfo")
     public StringAnalizer analize(@RequestParam String string){
         return new StringAnalizer(string);
