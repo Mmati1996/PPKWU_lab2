@@ -12,6 +12,7 @@ public class StringAnalizer {
 
     public StringAnalizer(String string) {
         for (int i=0; i<string.length();i++){
+            this.string = string;
             if (string.toCharArray()[i]>='A' && string.toCharArray()[i]<='Z')
                 upper++;
             else if(string.toCharArray()[i]>='a'&&string.toCharArray()[i]<='z')
